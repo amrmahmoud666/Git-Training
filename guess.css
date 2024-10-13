@@ -1,0 +1,167 @@
+* {
+    box-sizing: border-box;
+}
+:root {
+    --primary-color: #f44336;
+}
+
+body {
+    margin: 0;
+    background-color: #eee;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px;
+    margin: 0 0 50px;
+    background-color: white;
+}
+
+.guess-game {
+    text-align: center;
+    width: 1350px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 20px auto;
+    .game-area {
+        .inputs {
+        > div {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            span {
+                font-size: 30px;
+                font-weight: bold;
+                margin-right: 15px;
+            }
+        }
+        input {
+            width: 60px;
+            height: 60px;
+            font-size: 50px;
+            margin: 0 10px;
+            text-align: center;
+            caret-color: var(--primary-color);
+            border: none;
+            border-bottom: 3px solid #333;
+            &:focus {
+                outline: #ccc;
+            }
+                &.yes-in-place {
+                    background-color: #f89e13;
+                    border: #f89e13;
+                    color: white;
+            }
+            
+                &.not-in-place {
+                    background-color: #18ba89;
+                    border: #18ba89;
+                    color: white;
+            }
+            
+                &.no {
+                    background-color: #27303f;
+                    border: #27303f;
+                    color: white;
+                }
+        }
+        .disabled-inputs {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+            
+        }
+                .control {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10px;
+                    .check {
+                        background-color: var(--primary-color);
+                        flex: 3;
+                    }
+                    .hint {
+                        background-color:  #009688; ;
+                        flex: 1;
+                    }
+                }
+                button {
+                    padding: 15px 15px;
+                    font-size: 20px;
+                    font-weight: bold;
+                    color: white;
+                    border: none;
+                    cursor: pointer;
+                    border-radius: 6px;
+                    -webkit-border-radius: 6px;
+                    -moz-border-radius: 6px;
+                    -ms-border-radius: 6px;
+                    -o-border-radius: 6px;
+                }
+                button:disabled {
+                    background-color: rgb(40, 38, 38);
+                    opacity: 0.4;
+                    cursor: no-drop;
+                }
+                .message {
+                    font-size: 35px;
+                    margin: 15px auto;
+                    font-weight: bold;
+                    text-align: center;
+                    span {
+                        display: block;
+                        font-size: 40px;
+                        color: var(--primary-color);
+                        font-weight: bold;
+                        text-transform: capitalize;
+                        margin: 10px auto;
+                    }
+                }
+    }
+}
+    .key-colors {
+        .key-color {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            padding: 15px;
+            margin-bottom: 10px;
+            .key {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                margin-right: 10px;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                -ms-border-radius: 50%;
+                -o-border-radius: 50%;
+                &.in-place {
+                    background-color: #f89e13;
+                }
+                &.not-in-place {
+                    background-color: #18ba89;
+                }
+                &.no {
+                    background-color: #27303f;
+                }
+            }
+            .key-text {
+                font-weight: bold;
+                font-size: 20px;
+            }
+        }
+    }
+
+
+footer {
+    text-align: center;
+    color: white;
+    background-color: #333;
+    position: fixed;    
+    bottom: 0;
+    width: 100%;
+    padding: 15px;
+}
